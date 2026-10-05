@@ -1,0 +1,10 @@
+[Unit]
+Description=rogd ROG lighting daemon
+
+[Service]
+ExecStart=%h/.local/bin/rogd
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=default.target

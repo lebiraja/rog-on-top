@@ -1,0 +1,28 @@
+# Scene per Claude state. effect = static | breathe | pulse | comet
+[none]
+effect = "static"
+colour = "#ffffff"
+
+[idle]
+effect = "comet"
+colour = "#0000ff"
+period_ms = 3200
+tail = 0.6
+floor = 0.15
+
+[working]
+effect = "comet"
+colour = "#dd4c12"
+tail_colour = "#ffffff"
+period_ms = 1800
+tail = 0.5
+floor = 0.02
+
+[ask]
+effect = "pulse"
+colour = "#ff0000"
+period_ms = 700
+
+[done]
+effect = "static"
+colour = "#00ff00"

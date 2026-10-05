@@ -1,0 +1,13 @@
+[package]
+name = "rog-fx"
+edition.workspace = true
+version.workspace = true
+license.workspace = true
+
+[dependencies]
+rog-hid = { path = "../rog-hid" }
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.8"
+
+[dev-dependencies]
+serde_json = "1.0"
