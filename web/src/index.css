@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+  --color-ink: #07070a;
+  --color-panel: #0e0e13;
+  --color-raised: #15151c;
+  --color-line: #272730;
+  --color-mute: #7d7d8c;
+  --color-rog: #ff1744;
+  --color-rog-dim: #5c0a1c;
+}
+
+html,
+body {
+  background: var(--color-ink);
+  color: #ededed;
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+}
+
+input[type="range"] {
+  appearance: none;
+  height: 2rem;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 0.5rem;
+  background: var(--track, var(--color-line));
+}
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 1rem;
+  height: 2rem;
+  margin-top: -0.75rem;
+  background: var(--color-rog);
+  border-radius: 0;
+}
+input[type="range"]::-moz-range-track {
+  height: 0.5rem;
+  background: var(--track, var(--color-line));
+}
+input[type="range"]::-moz-range-thumb {
+  width: 1rem;
+  height: 2rem;
+  background: var(--color-rog);
+  border: 0;
+  border-radius: 0;
+}
+input[type="color"] {
+  appearance: none;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: 0;
+}
+:focus-visible {
+  outline: 2px solid var(--color-rog);
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+
+.cut {
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+}
+.key-cap {
+  transition: stroke 80ms linear;
+}
