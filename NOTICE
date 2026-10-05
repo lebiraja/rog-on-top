@@ -1,0 +1,14 @@
+rog-on-top
+Copyright 2026 lebiraja
+
+Licensed under the Apache License, Version 2.0.
+
+Third-party material
+--------------------
+- reference/data/aura_support.ron and the key geometry in web/src/layout.json are derived from
+  asusctl / rog-aura (https://gitlab.com/asus-linux/asusctl), licensed under MPL-2.0.
+  Those files remain under MPL-2.0.
+- reference/claude-glow is the author's own earlier project (MIT).
+
+"ASUS", "ROG" and "Armoury Crate" are trademarks of ASUSTeK Computer Inc. This project is not
+affiliated with or endorsed by ASUS.

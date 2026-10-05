@@ -27,3 +27,6 @@ Send `5d bc` (init) once before the first frame.
 - Bar LED names `bar1..bar6` follow packet offset order (27, 30, … 42). Physical positions were checked on hardware.
 - Per-key keyboard addressing and the logo zone are not mapped. They are not needed for status lighting.
 - Raw writes go to `/dev/hidraw0` as the user; avoid the `0x5a` feature reports (firmware territory).
+
+## Per-key probe (2026-10-05, confirmed on hardware)
+Sent asusd's full 11-packet per-key frame (`5d bc 00 01 01 01 <n<<4> 10`, row 10 byte7 `08`) with Esc/Q/W/E/A/S/D set and everything else black, streamed 8 s. Result: the whole keyboard lit alike (4-zone behaviour), no individual keys. This unit is the 4-zone SKU; `aura_support.ron` lists G614JU as `PerKey` generically. The editor therefore maps keys to the 4 zones by physical position.
